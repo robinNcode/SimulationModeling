@@ -14,18 +14,20 @@ if __name__ == '__main__':
 
     totalData = len(nums)
     totalClass = round(math.log(totalData) / math.log(2))
-    rangeValue = round((max(nums) - min(nums)) / totalClass, 1)
-    # print(rangeValue)
+    print("Total class: ", totalClass)
+
+    rangeValue = round((max(nums) - min(nums)) / totalClass, 3)
+    print("Range difference: ", rangeValue)
 
     # calculate all classes ranges
     classRanges = {}
     firstStart = min(nums)
-    firstEnd = firstStart + rangeValue
+    firstEnd = round(firstStart + rangeValue, 3)
 
     classStart = [firstStart]
     classEnd = [firstEnd]
 
-    for ptr in range(1, 10):
+    for ptr in range(1, totalClass + 1):
         classStart.append(firstEnd)
         firstEnd += rangeValue
         firstEnd = round(firstEnd, 3)
@@ -37,6 +39,7 @@ if __name__ == '__main__':
     oiList = []
 
     # calculate oi for each class
+    print()
     print("Class \t\t   | \tOi")
     print("_______________|_____________")
     for start in classRanges['start']:
@@ -49,5 +52,6 @@ if __name__ == '__main__':
         flag += 1
 
     # calculate chi square
-    chi.chiTest(oiList, 10)
-
+    # print("Sum of Oi list", sum(oiList))
+    print()
+    chi.chiTest(oiList, totalClass)
