@@ -2,7 +2,7 @@ import math
 
 if __name__ == '__main__':
     # Read the data into a list
-    data = open('run_test1.txt', 'r')
+    data = open('dataset1.txt', 'r')
     nums = []
     data_list = data.readlines()
 
@@ -23,14 +23,14 @@ if __name__ == '__main__':
         if runs_list[ptr + 1] != runs_list[ptr]:
             totalRun += 1
 
-    # print(runs_list)
-    # print(totalRun)
+    print(runs_list)
+    print(totalRun)
 
     miuA = (2 * totalNum - 1) / 3
     sigmaA = math.sqrt((16 * totalNum - 29) / 90)
     z0 = (totalRun - miuA) / sigmaA
 
-    # print(f'miuA = {miuA}\nsigmaA = {sigmaA}\nz0 = {z0}')
+    print(f'miuA = {miuA}\nsigmaA = {sigmaA}\nz0 = {z0}')
 
     zAlphaBy2 = float(input("Enter the value of Z alpha by two: "))
 
