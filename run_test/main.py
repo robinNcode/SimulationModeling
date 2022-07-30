@@ -2,13 +2,13 @@ import math
 
 if __name__ == '__main__':
     # Read the data into a list
-    data = open('dataset1.txt', 'r')
+    data = open('dataset2.txt', 'r')
     nums = []
     data_list = data.readlines()
 
     # Convert the list to a list of floats
     for i in data_list:
-        nums.append(float(i))
+        nums.append(i)
 
     totalNum = len(nums)
     runs_list = []
