@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     # Convert the list to a list of floats
     for i in data_list:
-        nums.append(i)
+        nums.append(float(i))
 
     totalNum = len(nums)
     runs_list = []

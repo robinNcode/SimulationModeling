@@ -1,4 +1,4 @@
-# chi square test inputting directly value of data
+# Ks test inputting directly value of data
 
 totalClass = int(input("How Many Numbers: "))
 data, ratioPlus, ratioMinus, dPlus, dMinus = [], [], [], [], []

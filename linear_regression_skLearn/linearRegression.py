@@ -33,6 +33,3 @@ reg.fit(xTrain, yTrain)
 # to test predict function is used here ...
 print(reg.predict(xTest))
 print(yTest)
-
-# print(xTrain)
-# print(x)
